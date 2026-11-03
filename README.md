@@ -1,8 +1,24 @@
-# projeto-1
+# Patas Felizes
 
-Projeto Next.js (App Router) criado com [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app), usado no curso **Claude Code do zero ao avançado** (MCP, Skills, Hooks e Rules).
+Landing page institucional de um petshop fictício, construída com Next.js (App Router). Apresenta os serviços (banho e tosa, veterinário, hotelzinho e loja de produtos), a história do negócio, depoimentos de clientes e contato via WhatsApp.
 
-> **Status:** projeto recém-iniciado. A home (`app/page.tsx`) ainda é o template padrão do `create-next-app` e o `metadata` do layout ainda não foi personalizado.
+O projeto é usado no curso **Claude Code do zero ao avançado** (MCP, Skills, Hooks e Rules).
+
+## Seções da página
+
+Página única (`app/page.tsx`) composta por Server Components em `components/`:
+
+| Componente | Conteúdo |
+|------------|----------|
+| `site-header.tsx` | Navegação do topo |
+| `hero-section.tsx` | Chamada principal e botões de ação |
+| `services-section.tsx` | Cards dos serviços (`#servicos`) |
+| `about-section.tsx` | Sobre o petshop |
+| `testimonials-section.tsx` | Depoimentos |
+| `contact-section.tsx` | Endereço, horários, telefone e WhatsApp (`#contato`) |
+| `site-footer.tsx` | Rodapé |
+
+O visual usa tokens de marca (`brand`, `brand-foreground`, `brand-soft`) definidos em `app/globals.css`, com tema claro e escuro automático via `prefers-color-scheme`.
 
 ## Tech Stack
 
@@ -62,10 +78,12 @@ Após uma série de mudanças, rode `npm run type-check && npm run lint`.
 ```
 projeto-1/
 ├── app/
-│   ├── layout.tsx      # Layout raiz (fontes Geist, metadata)
-│   ├── page.tsx        # Home (template padrão)
+│   ├── layout.tsx      # Layout raiz (fontes Geist, metadata, lang pt-BR)
+│   ├── page.tsx        # Home: compõe as seções da landing page
 │   └── globals.css     # Tailwind 4 + tokens de tema (claro/escuro)
-├── public/             # Assets estáticos (SVGs do template)
+├── components/         # Seções da página (header, hero, serviços, etc.)
+├── public/             # Assets estáticos
+├── .claude/            # Rules e skills do Claude Code
 ├── AGENTS.md           # Regras para agentes (Next.js com breaking changes)
 ├── CLAUDE.md           # Convenções do projeto para o Claude Code
 ├── eslint.config.mjs
