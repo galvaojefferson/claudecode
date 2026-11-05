@@ -1,4 +1,4 @@
-# Patas Felizes
+# Petshop Feliz Aula
 
 Landing page institucional de um petshop fictício, construída com Next.js (App Router). Apresenta os serviços (banho e tosa, veterinário, hotelzinho e loja de produtos), a história do negócio, depoimentos de clientes e contato via WhatsApp.
 
